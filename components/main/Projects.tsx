@@ -6,7 +6,6 @@ import Map from 'react-map-gl';
 const Projects = () => {
   return (
     <>
-    
     <div
       className="flex flex-col items-center justify-center py-20"
       id="projects"
