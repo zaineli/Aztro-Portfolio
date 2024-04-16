@@ -6,19 +6,6 @@ import Map from 'react-map-gl';
 const Projects = () => {
   return (
     <>
-    <div className='bg-white p-2'>
-    <h1>jdfjd</h1>
-    <Map
-    mapLib={import('mapbox-gl')}
-    initialViewState={{
-      longitude: -100,
-      latitude: 40,
-      zoom: 3.5
-    }}
-    style={{width: 600, height: 400}}
-    mapStyle="mapbox://styles/mapbox/streets-v9"
-    />;
-    </div>
     <div
       className="flex flex-col items-center justify-center py-20"
       id="projects"
