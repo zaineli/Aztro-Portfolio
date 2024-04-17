@@ -6,13 +6,19 @@ function Carousel({ projects }) {
   const scrollableDivRef = useRef(null);
   const [index, setIndex] = useState(0);
   const intervalRef = useRef<number>(null);
+  const [stopped, setStopped] = useState(false);
 
   useEffect(() => {
-    if (!intervalRef.current) {
+    if (!intervalRef.current && !stopped) {
       intervalRef.current = setInterval(() => {
         console.log("Next");
         setIndex((i) => (i + 1) % projects.length);
       }, 3000);
+    }
+
+    if (stopped && intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
     }
 
     if (scrollableDivRef.current) {
@@ -26,7 +32,7 @@ function Carousel({ projects }) {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
     };
-  }, [index]);
+  }, [index, stopped]);
 
   return (
     <div className=" overflow-hidden rounded-lg">
@@ -36,7 +42,11 @@ function Carousel({ projects }) {
       >
         {projects.map((project) => (
           <div className="w-full flex-none relative">
-            <div className=" absolute inset-0 hover:opacity-70 bg-black opacity-0 transition-opacity px-16 py-8">
+            <div
+              onMouseEnter={() => setStopped(true)}
+              onMouseLeave={() => setStopped(false)}
+              className=" absolute inset-0 hover:opacity-70 bg-black opacity-0 transition-opacity px-16 py-8"
+            >
               <h1 className="text-center font-bold text-xl">{project.title}</h1>
               <p className="mt-4">{project.description}</p>
             </div>
@@ -52,9 +62,11 @@ function Carousel({ projects }) {
         {projects.map((_, i) => (
           <button
             onClick={() => setIndex(i)}
-            className={`w-16 bg-white transition-all duration-500 h-2 rounded-full cursor-pointer ${
-              i === index ? "scale-[1.20]  carousel-button-load" : ""
-            }`}
+            className={` bg-white transition-all duration-500 h-2 rounded-full cursor-pointer ${
+              i === index && !stopped
+                ? "scale-[1.20]  carousel-button-load"
+                : ""
+            } ${stopped ? "w-2" : "w-16"}`}
           ></button>
         ))}
       </div>
