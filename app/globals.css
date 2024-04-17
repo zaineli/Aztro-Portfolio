@@ -97,3 +97,27 @@ body::-webkit-scrollbar-thumb {
 html {
   scroll-behavior: smooth;
 }
+
+.carousel-button-load {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: gray;
+    animation: carousel-button-animation 2500ms linear;
+    animation-delay: 500ms;
+    transform-origin: left center;
+    scale: 0 1;
+  }
+}
+
+@keyframes carousel-button-animation {
+  from {
+    scale: 0 1;
+  }
+  to {
+    scale: 1 1;
+  }
+}
