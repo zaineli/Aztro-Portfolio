@@ -35,9 +35,9 @@ function Carousel({ projects }) {
   }, [index, stopped]);
 
   return (
-    <div className=" overflow-hidden rounded-lg">
+    <div className=" overflow-hidden rounded-lg h-1000px">
       <div
-        className=" w-full flex  transition-all duration-1000"
+        className=" w-full flex  transition-all duration-900"
         ref={scrollableDivRef}
       >
         {projects.map((project) => (
@@ -53,7 +53,7 @@ function Carousel({ projects }) {
             <img
               src={project.image}
               alt={project.title}
-              className=" object-cover h-[500px] w-full"
+              className=" object-cover h-[650px] w-full"
             />
           </div>
         ))}

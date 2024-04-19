@@ -49,12 +49,20 @@ const HeroContent = () => {
           I&apos;m a Full Stack Software Engineer with experience in Website,
           Mobile, and Software development. Check out my projects and skills.
         </motion.p>
-        <motion.a
+        {/* <motion.a
           variants={slideInFromLeft(1)}
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
           onClick={() => window.open("/MyCV-2.pdf", "_blank")}
         >
             Download CV
+        </motion.a> */}
+
+        <motion.a
+          variants={slideInFromLeft(1)}
+          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+          href="#projects"
+        >
+            Projects
         </motion.a>
       </div>
 

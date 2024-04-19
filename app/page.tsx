@@ -12,7 +12,6 @@ export default function Home() {
         <Hero />
         <Skills />
         <Encryption />
-        <Projects />
         <NewProjects />
         <ContactForm />
       </div>
