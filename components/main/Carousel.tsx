@@ -11,7 +11,6 @@ function Carousel({ projects }) {
   useEffect(() => {
     if (!intervalRef.current && !stopped) {
       intervalRef.current = setInterval(() => {
-        console.log("Next");
         setIndex((i) => (i + 1) % projects.length);
       }, 3000);
     }
@@ -26,7 +25,6 @@ function Carousel({ projects }) {
       const parentLeft = parent.getBoundingClientRect().width;
       parent.style.translate = `${-parentLeft * index}px`;
     }
-    console.log("index: ", index);
 
     return () => {
       clearInterval(intervalRef.current);
