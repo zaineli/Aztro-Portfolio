@@ -36,8 +36,8 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="flex justify-center items-center min-h-screen bg-transparent overflow-hidden relative z-50">
-      <div className="relative flex justify-center  items-center">
+    <section className="flex justify-center items-center px-12 p-8 md:min-h-screen bg-transparent overflow-hidden relative z-50">
+      <div className="relative flex justify-center items-center">
         {sending && (
           <div className="absolute flex justify-center items-center gap-4 font-bold text-3xl text-white inset-0 bg-slate-500">
             Sending Mail
@@ -72,7 +72,7 @@ const ContactForm = () => {
             Error, Couldn't send Mail!
           </div>
         )}
-        <div className="container bg-white bg-opacity-10 p-6 rounded-tl-xl rounded-bl-xl shadow-lg flex-1">
+        <div className="container bg-white bg-opacity-10 p-6 rounded-md shadow-lg flex-1">
           <motion.h2
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}

@@ -33,9 +33,9 @@ function Carousel({ projects }) {
   }, [index, stopped]);
 
   return (
-    <div className=" overflow-hidden rounded-lg h-1000px">
+    <div className="overflow-hidden max-h-[800px] rounded-lg">
       <div
-        className=" w-full flex  transition-all duration-900"
+        className="w-full flex transition-all duration-900"
         ref={scrollableDivRef}
       >
         {projects.map((project) => (
@@ -43,15 +43,15 @@ function Carousel({ projects }) {
             <div
               onMouseEnter={() => setStopped(true)}
               onMouseLeave={() => setStopped(false)}
-              className=" absolute inset-0 hover:opacity-70 bg-black opacity-0 transition-opacity px-16 py-8"
+              className=" absolute inset-0 hover:opacity-70 bg-black opacity-0 transition-opacity p-8 md:px-16 py-8"
             >
-              <h1 className="text-center font-bold text-xl">{project.title}</h1>
-              <p className="mt-4">{project.description}</p>
+              <h1 className="text-center font-bold text-md md:text-xl">{project.title}</h1>
+              <p className="mt-4 text-sm md:text-base">{project.description}</p>
             </div>
             <img
               src={project.image}
               alt={project.title}
-              className=" object-cover h-[650px] w-full"
+              className=" object-cover max-h-[624px] w-full"
             />
           </div>
         ))}
@@ -60,11 +60,11 @@ function Carousel({ projects }) {
         {projects.map((_, i) => (
           <button
             onClick={() => setIndex(i)}
-            className={` bg-white transition-all duration-500 h-2 rounded-full cursor-pointer ${
+            className={` bg-white transition-all duration-500 h-1 md:h-2 rounded-full cursor-pointer ${
               i === index && !stopped
                 ? "scale-[1.20]  carousel-button-load"
                 : ""
-            } ${stopped ? "w-2" : "w-16"}`}
+            } ${stopped ? "w-1 md:w-2" : "w-8 md:w-16"}`}
           ></button>
         ))}
       </div>

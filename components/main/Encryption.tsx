@@ -11,7 +11,7 @@ const Encryption = () => {
       <div className="absolute w-auto h-auto top-0 z-[5]">
         <motion.div
           variants={slideInFromTop}
-          className="text-[40px] font-medium text-center text-gray-200"
+          className="text-2xl md:text-4xl lg:text-6xl font-medium text-center text-gray-200"
         >
           Performance
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
@@ -50,8 +50,8 @@ const Encryption = () => {
         </div>
       </div>
 
-      <div className="w-full flex items-start justify-center absolute">
-        {/* <video
+      {/* <div className="w-full flex items-start justify-center absolute">
+        <video
           loop
           muted
           autoPlay
@@ -59,8 +59,8 @@ const Encryption = () => {
           preload="false"
           className="w-full h-auto"
           src="/encryption.webm/"
-        /> */}
-      </div>
+        />
+      </div> */}
     </div>
   );
 };
