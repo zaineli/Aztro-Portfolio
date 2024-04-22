@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import StarsCanvas from "./StarBackground";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <>
