@@ -12,7 +12,13 @@ function NewProjects() {
       title: "Shirt Studio",
       link : "https://github.com/zaineli/3D-Animated-Website",
       description: `In this project, I integrated Generative AI with ThreeJS for 3D model customization. Leveraging Valtio for robust state management, I employed ThreeJS and Framer Motion for dynamic animations. Additionally, I utilized the StableDiffusion API for generating images based on prompts, enhancing the project's creative capabilities.`,
-      image: "/3.png",
+      image: "/ShirtMaker.png",
+    },
+    {
+      title: "NustFruta E-Commerce Website",
+      link : "https://nust-fruta.vercel.app",
+      description: `A Full-Stack Ecommerce Website for a local fruit-selling business in NUST University during Ramadan. Used NextJS and MongoDB as tech stack for the project and shadcn and tailwind for consistent and professional design. Hostelites could place orders scheduled for any date in the future. The vendors would get a sorted list of orders, the inventory needed for fulfilling a day's order, keep account of all orders fulfilled and manage limited stock.`,
+      image: "/nustfruta.jpg",
     },
     {
       title: "AlgoScribe",
@@ -21,16 +27,10 @@ function NewProjects() {
       image: "/algoscribe.png",
     },
     {
-      title: "Great looking website.",
-      link : "",
-      description: `Made in 2 days by our UI/UX developers and graphic designers. We have been specilizaing in this domain since the last 2 days. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, voluptatem quo quam, inventore totam sit ex cupiditate dolores perferendis, omnis eaque aliquam harum magni. Tempora eum accusamus odio esse aut.`,
-      image: "/CardImage.png",
-    },
-    {
-      title: "Great normal WEbsite",
-      link : "",
-      description: `Made in 123123 days by our UI/UX developers and graphic designers. We have been specilizaing in this domain since the last 2 days. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, voluptatem quo quam, inventore totam sit ex cupiditate dolores perferendis, omnis eaque aliquam harum magni. Tempora eum accusamus odio esse aut.`,
-      image: "/brainwave.png",
+      title: "Games Website",
+      link : "https://games-tahashah.netlify.app",
+      description: `This website is a collection of classic games all in one place. With Live communication between players through in-built chat. The games include Quaridor, a popular board game about two players trying to reach opposite ends of the board while also preventing the opponent(s). SuperTicToe is an evolution over the normal game where players have to win the inner boards in order to ultimately win the super board. ConnectK is an extension of Connect4 where players can choose the dimension and win condition of the board.`,
+      image: "/games.jpg",
     },
   ];
 
