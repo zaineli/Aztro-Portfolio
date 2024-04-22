@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 
 const ContactForm = () => {
   const [sending, setSending] = useState(false);
-  // const [sending, setSending] = useState(f);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState(false);
 

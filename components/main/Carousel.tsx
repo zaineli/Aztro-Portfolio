@@ -40,19 +40,22 @@ function Carousel({ projects }) {
       >
         {projects.map((project) => (
           <div className="w-full flex-none relative">
+            <a href={project.link} target="_blank" rel="noreferrer">
             <div
               onMouseEnter={() => setStopped(true)}
               onMouseLeave={() => setStopped(false)}
               className=" absolute inset-0 hover:opacity-70 bg-black opacity-0 transition-opacity p-8 md:px-16 py-8"
-            >
+              >
               <h1 className="text-center font-bold text-md md:text-xl">{project.title}</h1>
               <p className="mt-4 text-sm md:text-base">{project.description}</p>
             </div>
+          </a>
+
             <img
               src={project.image}
               alt={project.title}
-              className=" object-cover max-h-[624px] w-full"
-            />
+              className=" object-cover max-h-[700px] w-full"
+              />
           </div>
         ))}
       </div>
